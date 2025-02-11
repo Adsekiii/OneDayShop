@@ -14,7 +14,12 @@ namespace dotnetShop.Controllers
 
         // Our Code
 
-            
+        public IActionResult Cart()
+        {
+            return View();
+        }
+
+
 
         //
 
