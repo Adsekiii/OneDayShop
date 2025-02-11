@@ -9,13 +9,13 @@ We worked together, [@wjakubowicz](https://github.com/wjakubowicz) and [@Adsekii
 
 ## TO-DO
 
-- [ ] **Product Availability Update**: Easily update the quantity of available products.
+- [x] **Product Availability Update**: Easily update the quantity of available products.
 - [ ] **Customer Support Chat**: Integrated chat feature for user support.
 - [x] **Add and Remove Listings**: Manage product listings with options to add or remove items.
 - [ ] **Image Upload for Listings**: Upload images to enhance product listings.
 - [x] **Product Listing Form**: User-friendly form for adding new product listings.
 - [ ] **Shopping Cart**: Persistent shopping cart accessible at all times.
-- [ ] **Buy Button Activation**: "Buy" button activated upon user login.
+- [x] **Buy Button Activation**: "Buy" button activated upon user login.
 - [ ] **Coupon Code Integration**: Input field for applying discount coupons in the cart.
 - [ ] **Product Purchase**: Seamless purchasing process for products from listings.
 - [x] **User Authentication**: Secure login functionality for users.

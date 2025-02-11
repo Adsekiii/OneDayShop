@@ -12,5 +12,12 @@
         {
             
         }
+        public Product(int id, string name, int amount, float price)
+        {
+            Id = id;
+            Name = name;
+            Amount = amount;
+            Price = price;
+        }
     }
 }

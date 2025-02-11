@@ -7,6 +7,7 @@ using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using dotnetShop.Data;
 using dotnetShop.Models;
+using Microsoft.AspNetCore.Authorization;
 
 namespace dotnetShop.Controllers
 {
@@ -42,6 +43,29 @@ namespace dotnetShop.Controllers
 
             return View(product);
         }
+
+        // Bought item
+        [Authorize]
+        public IActionResult BoughtItem(int id)
+        {
+            Product productToUpdate = _context.Product.FirstOrDefault(p => p.Id == id);
+
+            
+            if (productToUpdate == null)
+            {
+                return NotFound();  
+            }
+
+           
+            productToUpdate.Amount -= 1;
+
+            
+            _context.Product.Update(productToUpdate);
+            _context.SaveChanges();
+
+            return RedirectToAction("Index","Products");
+        }
+
 
         // GET: Products/Create
         public IActionResult Create()
