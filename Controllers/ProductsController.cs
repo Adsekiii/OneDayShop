@@ -50,20 +50,20 @@ namespace dotnetShop.Controllers
         {
             Product productToUpdate = _context.Product.FirstOrDefault(p => p.Id == id);
 
-            
+
             if (productToUpdate == null)
             {
-                return NotFound();  
+                return NotFound();
             }
 
-           
+
             productToUpdate.Amount -= 1;
 
-            
+
             _context.Product.Update(productToUpdate);
             _context.SaveChanges();
 
-            return RedirectToAction("AddItemToCart","Carts", new { id = id });
+            return RedirectToAction("AddItemToCart", "Carts", new { id = id });
         }
 
 

@@ -22,17 +22,25 @@ namespace dotnetShop.Controllers
         // GET: Carts
         public async Task<IActionResult> Index()
         {
+            var totalSpent = 0;
+            foreach (var item in _context.Cart)
+            {
+                totalSpent += item.ItemQuantity * (int)_context.Product.FirstOrDefault(product => product.Id == item.ProductID).Price;
+            }
+
+            ViewBag.TotalSpent = totalSpent;
+
             return View(await _context.Cart.ToListAsync());
         }
 
         //
         public IActionResult AddItemToCart(int id)
         {
-            
+
             Cart item = new Cart(id);
             item.UserID = 0;
 
-            
+
             var existingCartItem = _context.Cart.FirstOrDefault(cart => cart.ProductID == id);
 
             if (existingCartItem != null)
@@ -46,7 +54,7 @@ namespace dotnetShop.Controllers
             }
 
             _context.SaveChanges();
-           
+
             return RedirectToAction("Index", "Products");
         }
         //
