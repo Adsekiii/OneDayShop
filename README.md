@@ -22,12 +22,31 @@ We worked together, [@wjakubowicz](https://github.com/wjakubowicz) and [@Adsekii
 - [x] **Static Pages**: Includes About, Shop, and Cart pages for user navigation.
 - [x] **Database Connection**: Robust connection to a database for data management.
 - [ ] **Product Recommendations**: Suggest products based on tags for better user experience.
-- [ ] **Price Calculation**: Automatic summation of product prices in the cart.
+- [x] **Price Calculation**: Automatic summation of product prices in the cart.
 - [ ] **Email Notifications**: Sends an email confirmation upon inquiry submission on the "Contact" page.
 - [ ] **Product Search Functionality**: Efficient search feature to find products quickly.
+
+---
+
+## Our Thoughts
+
+- wjakubowicz: It was my first ASP.NET project, and I learned a lot about the technology.
+I had previous experience working with the Django framework in Python and I found ASP.NET to be quite similar in many aspects.
+I enjoyed working with Adsekiii and building this project together. I'm proud of what we accomplished in such a short time. 
+
+- Adsekiii: 
 
 ---
 
 ## Technologies Used
 
 - ASP.NET
+
+---
+
+## Epilogue
+
+Due to the unforeseen circumstances, we were unable to complete all the features we had planned.
+However, we are proud of what we accomplished in such a short time.
+In the future, we may consider revisiting this project to incorporate additional features and enhance the existing ones in a separate repository.
+This approach will ensure that the current repository remains true to its original purpose as a 24-hour challenge.
