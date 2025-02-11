@@ -56,3 +56,4 @@ Due to the unforeseen circumstances, we were unable to complete all the features
 However, we are proud of what we accomplished in such a short time.
 In the future, we may consider revisiting this project to incorporate additional features and enhance the existing ones in a separate repository.
 This approach will ensure that the current repository remains true to its original purpose as a 24-hour challenge.
+(Even though it was closer to 10 hours due to our chores ^_- )
