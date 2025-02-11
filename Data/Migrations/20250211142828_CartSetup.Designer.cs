@@ -12,7 +12,7 @@ using dotnetShop.Data;
 namespace dotnetShop.Data.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    [Migration("20250211131143_CartSetup")]
+    [Migration("20250211142828_CartSetup")]
     partial class CartSetup
     {
         /// <inheritdoc />
@@ -234,6 +234,9 @@ namespace dotnetShop.Data.Migrations
                         .HasColumnType("int");
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"));
+
+                    b.Property<int>("ItemQuantity")
+                        .HasColumnType("int");
 
                     b.Property<int>("ProductID")
                         .HasColumnType("int");

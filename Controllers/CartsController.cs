@@ -25,6 +25,31 @@ namespace dotnetShop.Controllers
             return View(await _context.Cart.ToListAsync());
         }
 
+        //
+        public IActionResult AddItemToCart(int id)
+        {
+            
+            Cart item = new Cart(id);
+            item.UserID = 0;
+
+            
+            var existingCartItem = _context.Cart.FirstOrDefault(cart => cart.ProductID == id);
+
+            if (existingCartItem != null)
+            {
+                existingCartItem.ItemQuantity += 1;
+                _context.Cart.Update(existingCartItem);
+            }
+            else
+            {
+                _context.Cart.Add(item);
+            }
+
+            _context.SaveChanges();
+           
+            return RedirectToAction("Index", "Products");
+        }
+        //
         // GET: Carts/Details/5
         public async Task<IActionResult> Details(int? id)
         {

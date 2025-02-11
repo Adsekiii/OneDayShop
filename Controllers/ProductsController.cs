@@ -63,7 +63,7 @@ namespace dotnetShop.Controllers
             _context.Product.Update(productToUpdate);
             _context.SaveChanges();
 
-            return RedirectToAction("Index","Products");
+            return RedirectToAction("AddItemToCart","Carts", new { id = id });
         }
 
 

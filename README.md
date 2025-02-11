@@ -14,7 +14,7 @@ We worked together, [@wjakubowicz](https://github.com/wjakubowicz) and [@Adsekii
 - [x] **Add and Remove Listings**: Manage product listings with options to add or remove items.
 - [ ] **Image Upload for Listings**: Upload images to enhance product listings.
 - [x] **Product Listing Form**: User-friendly form for adding new product listings.
-- [ ] **Shopping Cart**: Persistent shopping cart accessible at all times.
+- [x] **Shopping Cart**: Persistent shopping cart accessible at all times.
 - [x] **Buy Button Activation**: "Buy" button activated upon user login.
 - [ ] **Coupon Code Integration**: Input field for applying discount coupons in the cart.
 - [ ] **Product Purchase**: Seamless purchasing process for products from listings.

@@ -17,7 +17,8 @@ namespace dotnetShop.Data.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     UserID = table.Column<int>(type: "int", nullable: false),
-                    ProductID = table.Column<int>(type: "int", nullable: false)
+                    ProductID = table.Column<int>(type: "int", nullable: false),
+                    ItemQuantity = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
                 {
