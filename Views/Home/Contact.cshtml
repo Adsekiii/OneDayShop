@@ -1,8 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Contact";
+	ViewData["Title"] = "Contact";
 }
 
 <div class="text-center">
-    <h1 class="display-4">@ViewData["Title"]</h1>
-    <p>Use this page to provide your contact information.</p>
+	<h1 class="display-4">@ViewData["Title"]</h1>
+	<p>Use this page to provide your contact information.</p>
+</div>
+
+<div class="container">
+	@using (Html.BeginForm("Contact", "Home", FormMethod.Post, new { @class = "contact-form" }))
+	{
+		<div class="form-group">
+			@Html.Label("Email")
+			@Html.TextBox("Email", null, new { @class = "form-control", placeholder = "Enter your email" })
+		</div>
+		<div class="form-group">
+			@Html.Label("Name")
+			@Html.TextBox("Name", null, new { @class = "form-control" , placeholder = "Enter your name" })
+		</div>
+		<div class="form-group">
+			@Html.Label("Message")
+			@Html.TextArea("Message", null, new { @class = "form-control" , placeholder = "Enter your message"})
+		</div>
+		<button type="submit" class="btn btn-primary">Submit</button>
+    }
 </div>
