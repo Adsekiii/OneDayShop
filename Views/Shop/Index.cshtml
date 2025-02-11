@@ -2,7 +2,32 @@
 	ViewData["Title"] = "Shop";
 }
 
+@model List<Product>
+
 <div>
 	<h1>@ViewData["Title"]</h1>
+	<a class="btn btn-primary" asp-controller="Shop" asp-action="AddEditProductListing">Add New Listing</a>
+
+	<table class="table">
+		<thead>
+			<tr>
+				<td>Name</td>
+				<td>Quantity</td>
+				<td>Price</td>
+			</tr>
+		</thead>
+		<tbody>
+			@{
+				foreach(var item in @Model)
+				{
+					<tr>
+						<td>@item.Name</td>
+						<td>@item.Amount</td>
+						<td>@item.Price</td>
+					</tr>
+				}
+			}
+		</tbody>
+	</table>
 
 </div>

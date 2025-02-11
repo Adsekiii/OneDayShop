@@ -7,9 +7,19 @@ namespace dotnetShop.Controllers
 {
     public class ShopController : Controller
     {
+
+        private readonly ProductsDbContext _context;
+
+        public ShopController(ProductsDbContext context) 
+        {
+            _context = context;
+        }
         public IActionResult Index()
         {
-            return View();
+            var allListings = _context.Products.ToList();
+
+
+            return View(allListings);
         }
 
         // Our Code
@@ -19,7 +29,26 @@ namespace dotnetShop.Controllers
             return View();
         }
 
+        public IActionResult AddEditProductListing()
+        {
+            return View();
+        }
 
+        public IActionResult AddEditProductListingForm(Product item)
+        {
+            if(item.Id == 0)
+            {
+                _context.Products.Add(item);
+            }
+            else
+            {
+                _context.Products.Update(item);
+            }
+
+            _context.SaveChanges();
+
+            return RedirectToAction("Index");
+        }
 
         //
 
