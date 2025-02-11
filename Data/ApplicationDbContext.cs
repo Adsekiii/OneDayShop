@@ -11,5 +11,6 @@ namespace dotnetShop.Data
         {
         }
         public DbSet<dotnetShop.Models.Product> Product { get; set; } = default!;
+        public DbSet<dotnetShop.Models.Cart> Cart { get; set; } = default!;
     }
 }
